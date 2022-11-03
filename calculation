@@ -1,0 +1,24 @@
+''' Write a program to compute the wage of daily labour as per the following rules
+a) For first 4hrs Rs 30/- per hr
+b) For next 4hrs Rs 40/- per hr
+c) For next 2hrs beyond 8hrs Rs 50/- per hr extra
+d) For rest Rs 60/- per hr extra   '''
+
+Name = input("Enter the name of the labour = ")
+workingHours = int(input("Enter Working Hours: "))
+
+if(workingHours == 4):
+    firstpay = 30*4
+    print(firstpay)
+elif(workingHours <= 8):
+    work = workingHours-4
+    secondPay = (30*4)+(work*40) 
+    print("Total:",secondPay)
+elif(workingHours <= 10):
+    work2 = workingHours-8
+    thirdPay = (30*4)+(40*4)+(50*work2)        
+    print("Extra Payment:",thirdPay)    
+else:
+    extraHours = workingHours -10
+    TotalextraPay = (30*4)+(40*4)+(50*2)+(extraHours*60)        
+    print("Extra Payment:",TotalextraPay)
